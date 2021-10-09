@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+	int b;
+	srand(time(0));
+	int a = rand();
+	a = a % 100;
+	
+	do{
+		scanf("%d", &b);
+		if (b > a)
+		{
+			printf("big\n");
+		}
+		else if (b < a)
+		{
+			printf("small\n");
+		}
+
+	} while (b != a );
+
+	printf("over\n");
+	return 0;
+}
