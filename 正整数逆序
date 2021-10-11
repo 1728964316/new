@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int num, b;
+	int c = 0;
+	scanf("%d", &num);
+	while (num > 0)
+	{
+		b = num % 10;
+		printf("%d", b);
+		c = c * 10 + b;
+		num /= 10;
+	}
+	return 0;
+}
