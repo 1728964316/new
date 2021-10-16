@@ -1,6 +1,8 @@
 #include<stdio.h>
+#include<stdio.h>
 #include<stdlib.h>
 #include<windows.h>
+#include<time.h>
 int main()
 {
 	int i = 0;
@@ -9,16 +11,17 @@ int main()
 	int y = 5;
 	int v_x = 1;
 	int v_y = 1;
+
 	int left = 0;
 	int right = 50;
 	int top = 0;
-	int bottom = 30;
+	int bottom = 30;//边界
 
-	while (1)
+	while (1)//无限循环
 	{
 		x = x + v_x;
 		y = y + v_y;
-		system("cls");
+		system("cls");//清屏
 		for (i = 0; i < x; i++) {
 			printf("\n");
 		}
@@ -27,7 +30,14 @@ int main()
 		}
 		printf("O");
 		printf("\n");
-		_sleep(10);
+		int a = clock();
+		int b = 0;
+		while (b <= 50)
+		{
+			b = clock();
+			b = b - a;
+		}
+		//_sleep(10);//延时
 
 		if ((x == top || x == bottom)) {
 			printf("\a");
