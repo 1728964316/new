@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-
+#include<windows.h>
 int main()
 {
 	int i, j;
@@ -12,7 +12,7 @@ int main()
 	int n = 20;//靶子
 	while (1)
 	{
-		_sleep(50);
+		Sleep(50);
 		system("cls");
 
 		if (H == 0)
