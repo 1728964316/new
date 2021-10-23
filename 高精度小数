@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main()
+{
+	const int i = 200;
+	int a, b;
+	scanf("%d/%d", &a, &b);
+	int sum[i];//商
+	int num[i+1];//余数
+	int c ;//计数
+
+	num[0] = a;
+	printf("0.");
+	for (c = 0; c < i; c++)
+	{
+		sum[c] = num[c] * 10 / b;
+		num[c+1] = num[c] * 10 % b;
+		if (num[c] == 0)
+		{
+			break;
+		}
+		printf("%d", sum[c]);
+		
+	}
+	return 0;
+}
