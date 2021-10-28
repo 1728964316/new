@@ -1,0 +1,62 @@
+#include<stdio.h>
+
+int a,c;
+int b = 0;
+int i, j;
+int num = 0;//结果 
+
+
+int main()
+{
+	scanf("%d", &a);
+	if (a > 0)
+	{
+		j = a;
+		for (i = 0; j > 0; i++)
+		{
+			j /= 10;
+		}
+		if (i > 32)
+		{
+			printf("0");
+		}
+		else
+		{
+			while (a > 0)
+			{
+				c = a % 10;
+				a /= 10;
+				b = b * 10 + c;
+			}
+			printf("%d", b);
+		}
+	}
+	else if (a == 0)
+	{
+		printf("0");
+	}
+	else if (a < 0)
+	{
+		a = -a;
+		j = a;
+		for (i = 0; i < 32; i++)
+		{
+			j /= 10;
+		}
+		if (i > 32)
+		{
+			printf("0");
+		}
+		else
+		{
+			while (a > 0)
+			{
+				c = a % 10;
+				a /= 10;
+				b = b * 10 + c;
+			}
+			printf("%d", -b);
+		}
+	}
+	return 0;
+}
