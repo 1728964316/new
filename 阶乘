@@ -1,0 +1,20 @@
+#include<stdio.h>
+int a,i;
+int b=1;
+int c=0;
+int main()
+{
+    scanf("%d",&a);
+    for(a;a>0;a--)
+    {
+        for(i=a;i>0;--i)
+        {
+            b=b*i;
+        }
+        c=b+c;
+        b=1;
+        
+    }
+    printf("%d",c); 
+    return 0;
+}
