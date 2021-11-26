@@ -1,0 +1,61 @@
+#include<stdio.h>
+
+void ys(int a,int b);
+void bs(int a,int b);
+
+int main()
+{
+	int a,b;
+	scanf("%d %d",&a,&b);
+	ys(a,b);
+	bs(a,b);
+//	int i;
+//	for(i = 2;i < (a > b ? a : b);i++)
+//	{
+//		if(a % i == 0 && b % i == 0)
+//		{
+//			printf("%d ",i);
+//			break;
+//		}
+//	}
+//	int j;
+//	for(j = (a > b ? b : a);;j++)
+//	{
+//		if(j % a == 0 && j % b == 0)
+//		{
+//			printf("%d ",j);	
+//			break;
+//		}	
+//	}	
+	return 0;	
+} 
+
+
+void ys(int a,int b)					//最大公约数
+{
+	int i;
+	for(i = 2;i < (a > b ? a : b);i++)
+	{
+		if(a % i == 0 && b % i == 0)
+		{
+			printf("%d ",i);
+			break;
+		}
+	}
+	
+} 
+
+
+void bs(int a,int b)					//最小公倍数
+{
+	int j;
+	for(j = (a > b ? b : a);;j++)
+	{
+		if(j % a == 0 && j % b == 0)
+		{
+			printf("%d ",j);	
+			break;
+		}	
+	}	
+
+}
